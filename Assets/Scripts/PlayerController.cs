@@ -5,7 +5,8 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
     
 {
-    public float speed = 1.0f;
+    public float speed = 1.0f; 
+    public float jume = 1.0f; 
 
     Rigidbody2D rigidbody ;
 
@@ -25,6 +26,11 @@ public class PlayerController : MonoBehaviour
         {
             f = new Vector2(-speed, 0);
         }
+        //else if(Input.GetKeyDown(KeyCode,0))
+        //{
+        //    Debug.Log("im jume");
+       //     rigidbody.AddForce(new Vector2(0,jume), ForceMode2D.Impulse);
+       // }
         
         
         
