@@ -17,5 +17,11 @@ public class JumeAble : MonoBehaviour
             Rigidbody2D rigidbody2D = gameObject.GetComponentInParent<Rigidbody2D>();
             rigidbody2D.AddForce(new Vector2(0,jume), ForceMode2D.Impulse);
         }
+        else if (collision.CompareTag("Spikes"))
+        {
+            Debug.Log("dead");
+            Rigidbody2D rigidbody2D = gameObject.GetComponentInParent<Rigidbody2D>();
+            rigidbody2D.AddForce(new Vector2(0,jume), ForceMode2D.Impulse);
+        }
     }
 }
