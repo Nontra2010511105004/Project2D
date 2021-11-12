@@ -23,7 +23,7 @@ public class JumeAble : MonoBehaviour
             Debug.Log("dead");
             //Rigidbody2D rigidbody2D = gameObject.GetComponentInParent<Rigidbody2D>();
             //rigidbody2D.AddForce(new Vector2(0,jume), ForceMode2D.Impulse);
-            SceneManager.LoadScene(0);
+            SceneManager.LoadScene(2);
         }
     }
 }
