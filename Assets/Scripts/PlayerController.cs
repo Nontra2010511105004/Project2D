@@ -5,11 +5,20 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
     
 {
+    //[SerializeField]
+    Rigidbody2D rigidbody ;
     public float speed = 1.0f; 
     public float jume = 1.0f; 
-
-    Rigidbody2D rigidbody ;
-
+    public int score = 0;
+    
+    public void AddScore()
+    {
+        score = score + 1;
+    }
+    public int GetScore()
+    {
+        return score;
+    }
     private void Start()
     {
         rigidbody = GetComponent<Rigidbody2D>();

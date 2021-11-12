@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class JumeAble : MonoBehaviour
 {
@@ -17,11 +18,12 @@ public class JumeAble : MonoBehaviour
             Rigidbody2D rigidbody2D = gameObject.GetComponentInParent<Rigidbody2D>();
             rigidbody2D.AddForce(new Vector2(0,jume), ForceMode2D.Impulse);
         }
-        else if (collision.CompareTag("Spikes"))
+        else if (collision.CompareTag("Spike"))
         {
             Debug.Log("dead");
-            Rigidbody2D rigidbody2D = gameObject.GetComponentInParent<Rigidbody2D>();
-            rigidbody2D.AddForce(new Vector2(0,jume), ForceMode2D.Impulse);
+            //Rigidbody2D rigidbody2D = gameObject.GetComponentInParent<Rigidbody2D>();
+            //rigidbody2D.AddForce(new Vector2(0,jume), ForceMode2D.Impulse);
+            SceneManager.LoadScene(0);
         }
     }
 }
